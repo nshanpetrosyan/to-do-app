@@ -3,10 +3,10 @@ function onReady() {
   const newToDoText = document.getElementById('newToDoText');
   const toDoList = document.getElementById('toDoList');
 
-  addToDoForm.addEventListener('submit', () => {
+  addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
 
-    // get the newToDoText
+    // get the text
     let title = newToDoText.value;
 
     // create a new li
@@ -19,7 +19,7 @@ function onReady() {
     checkbox.type = "checkbox";
 
     // set the title
-    newLi.textContent = title'
+    newLi.textContent = title;
 
     // attach the checkbox to the li
     newLi.appendChild(checkbox);
@@ -27,7 +27,7 @@ function onReady() {
     // attach the li to the ul
     toDoList.appendChild(newLi);
 
-    // empty the input
+    //empty the input
     newToDoText.value = '';
   });
 }
